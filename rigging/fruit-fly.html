@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html style="background-color: #2B3238; color: white;">
+
+<head>
+	<title>Rigging - Samantha DeSouto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robot" content="noindex, nofollow, none, noimageindex">
+
+	<link rel="stylesheet" href="../main.css">
+	<link rel="stylesheet" href="../styles/header.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+	<link rel="stylesheet" href="../styles/portfolio.css">
+	<link rel="stylesheet" href="../styles/showcase.css">
+
+	<script src="../scripts/headerScripts.js"></script>
+	<script src="../scripts/showcaseScripts.js"></script>
+	<script>
+		var loadingImage = "../media/symbols/loading.png";
+		var playImage = "../media/symbols/arrow-left.svg";
+	</script>
+</head>
+
+<body>
+	<noscript><div><span class="noscript-symbol">ⓘ</span>&nbsp;&nbsp;<span class="noscript-bold">Javascript is disabled.</span>&nbsp;&nbsp;Certain medias in the Portfolio page require Javascript in order to work. These elements may not display properly with scripts disabled.</div></noscript>
+	
+	<header>
+		<a class="h-name" href="../index.html">
+			Samantha DeSouto<br>
+			<span class="h-name-job">3D Generalist</span>
+		</a>
+		<nav class="h-nav">
+			<a href="../animation.html" class="nav-selected"><div>PORTFOLIO</div></a>
+			<a href="../about.html"><div>ABOUT</div></a>
+			<a href="../contact.html"><div>CONTACT</div></a>
+		</nav>
+		<a id="h-nav-MOB" onclick="headerToggle()"><img src="../media/symbols/svg-menu.svg"></a>
+	</header>
+
+	<div id="h-menu-MOB">
+		<div>
+			<a href="../animation.html" class="nav-selected"><div>PORTFOLIO</div></a>
+			<div></div>
+			<a href="../about.html"><div>ABOUT</div></a>
+			<div></div>
+			<a href="../contact.html"><div>CONTACT</div></a>
+		</div>
+	</div>
+
+	<nav class="pf-nav">
+		<a href="../animation.html">ANIMATION</a>
+		<a href="../modeling.html">MODELING</a>
+		<a href="../texturing.html">TEXTURING</a>
+		<a href="../rigging.html" class="nav-selected">RIGGING</a>
+	</nav>
+
+	<div class="sc-header">
+		<picture>
+			<source srcset="../modeling/media/fly-header.png">
+			<img src="../modeling/media/fly-header.png" style="object-position: 100% 50%;">
+		</picture>
+		<div class="sc-title">
+			<div class="sc-title-text">Fruit Fly Lab<br><span class="sc-subtitle">Vendor Commission</span>
+			</div>
+			<img src="../media/symbols/title-incline.svg">
+		</div>
+		<div class="sc-progs">
+			<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+		</div>
+		<div class="sc-back">
+			<a href="../rigging.html">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><polygon points="300 124.81 93.22 124.81 185.63 27.25 118.41 27.25 0 150 118.41 272.75 185.63 272.75 93.22 175.19 300 175.19 300 124.81" /></svg>
+				<span>BACK</span>
+				</a>
+		</div>
+	</div>
+	
+	<div class="sc-title-MOB">
+		<div class="sc-title-text-MOB">Fruit Fly Lab<br><span class="sc-subtitle-MOB">Vendor Commission</span>
+		</div>
+	</div>
+
+	<div class="sc-i sc-i-closed">
+		
+		<div class="sc-i-body">
+
+			<p><span class="sc-i-sym">ⓘ</span>
+			&nbsp;&nbsp;I was commissioned and eventually became a vendor for the <a class="i-aqua" href="https://maimonlab.rockefeller.edu/" target="_blank">Maimon <span>Lab</span></a> of Rockefeller University for their scientific research: using fruit flies to study brain functionality. The head of the lab requested me to make video content that shows a viewer-friendly version of the experiments performed for talks and scientific journals/newsletters. Since this was a single-person project, all aspects had to be created by myself, including animation, environments, models, and composition planning.</p>
+			<p>The first set of requests were done in 2023, which includes creation of all of the meshes/rigs. Fruit fly references were supplied by the lab to aid in modeling and rigging. The model uses both IK and FK rigging, and all bones are seperated into groups. Since the legs have more than two bends, multiple bones are used for full control while retaining the IK rig. There are additional mesh deformation bones used to prevent clipping and add more motion.</p>
+
+			<div class="sc-i-credit">
+				<div class="sc-i-c-title">CREDITS</div>
+				<ul>
+					<li><span>Samantha DeSouto</span>all assets</li>
+				</ul>
+			</div>
+				
+		</div>
+		<div class="sc-i-show" onclick="infoToggle(this)"><span class="sc-i-PC">SHOW MORE</span><img class="sc-i-MOB" src="../media/symbols/point-down.svg"></div>
+	</div>
+
+	<div class="sc-dir sc-layout-2">
+		
+		<div class="sc-media">
+			<div class="sc-img" style="aspect-ratio:1280/720;">
+				<picture>
+					<source srcset="./media/fruitfly-3.png">
+					<img src="./media/fruitfly-3.png" loading=lazy">
+				</picture>
+			</div>
+		</div>
+		
+		<div class="sc-media">
+			<div class="sc-img" style="aspect-ratio:1280/720;">
+				<picture>
+					<source srcset="./media/fruitfly-4.png">
+					<img src="./media/fruitfly-4.png" loading=lazy">
+				</picture>
+			</div>
+		</div>
+	</div>
+
+	<div class="sc-dir sc-layout-3">
+		
+		<div class="sc-media">
+			<div class="sc-img" style="aspect-ratio:1;">
+				<picture>
+					<source srcset="./media/fruitfly-2.png">
+					<img src="./media/fruitfly-2.png" loading=lazy">
+				</picture>
+			</div>
+		</div>
+		
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1;">
+				<picture vidlink="./media/fruitfly-1.mp4">
+					<source srcset="./media/thumb/vid/fruitfly-1.png">
+					<img src="./media/thumb/vid/fruitfly-1.png" loading=lazy>
+				</picture>
+			</div>
+		</div>
+		
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1;">
+				<picture vidlink="./media/fruitfly-5.mp4">
+					<source srcset="./media/thumb/vid/fruitfly-5.png">
+					<img src="./media/thumb/vid/fruitfly-5.png" loading=lazy>
+				</picture>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		headerSetup();
+		showcaseInit();
+	</script>
+
+	<footer>&copy; Copyright <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script><noscript>2025</noscript> – Samantha DeSouto<br>All Rights Reserved.
+	</footer>
+</body>
+
+
+</html>

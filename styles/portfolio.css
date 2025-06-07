@@ -1,0 +1,236 @@
+/*=====================================*/
+/*  PORTFOLIO NAVIGATION (pf-nav)
+/*=====================================*/
+.pf-nav{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px 16px;
+    position: relative;
+}
+
+.pf-nav > a{
+    font-family: "DM Sans";
+    font-weight: 450;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: white;
+
+    max-width: 200px;
+    width: 25%;
+    padding: 4px 24px 4px 24px;
+    transition: color 0.05s;
+    background-color: #22282E;
+    text-align: center;
+
+}
+
+.pf-nav > a:hover{
+    color: #cffcf1;
+    cursor: pointer;
+}
+
+.pf-nav > a.nav-selected{
+    background-color: #0f8065;
+}
+
+/*------- MOBILE --------- */
+@media (max-width: 640px){
+    .pf-nav{
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .pf-nav > a{
+        font-size: 0.9rem;
+        max-width:none;
+
+        width: calc(50% - 3px);
+        padding: 4px;
+    }
+}
+
+@media (max-width: 424px){
+    .pf-nav{
+        padding: 8px 8px;
+    }    
+}
+
+
+
+/*=====================================*/
+/*  PORTFOLIO DIRECTORY (pf-dir)
+/*=====================================*/
+.pf-dir{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    --dir-gap: 16px;
+    gap: var(--dir-gap);
+    margin: 8px 32px;
+    padding: 16px;
+    background-color: #22282E;
+}
+
+.pf-dir > div{
+    width: calc(33% -  calc(var(--dir-gap) * calc(2/3))   );
+    aspect-ratio: 512/356;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.pf-dir > div > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+    display: block;
+    position: relative;
+    background-color: #15191d;
+}
+
+.pf-dir-link,
+.pf-dir-name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pf-dir-name{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.pf-dir-name > img{
+    height: 1px;
+    width: 1px;
+    transform-origin: left bottom;
+    transform: scaleY(54) scaleX(calc(54 / 4));
+}
+
+.pf-dir-name > div{
+    height: 54px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 100%;
+    color: white;
+    padding: 8px 8px 7px 7px;
+
+    background-color: #3e5555;
+}
+
+.pf-dir-name > div span{
+    color: #96B5AE;
+    font-size: 1rem;
+}
+
+
+.pf-dir-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity 0.2s;
+    background-color: rgba(23, 42, 43, 0.651);
+    opacity: 0;
+}
+
+.pf-dir-link > div > span{
+    text-shadow: 0px 0px 10px #1e2b2e;
+}
+
+.pf-dir-link > div{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "DM Sans";
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.pf-dir-link > div > img{
+    height: 0.8lh;
+    width: auto;
+    aspect-ratio: 1;
+}
+
+.pf-dir-link:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+
+
+/*=====================================*/
+/*  RESIZING
+/*=====================================*/
+
+/* ---- increase sizing on outer viewport padding ---*/
+@media (max-width: 1000px) {
+    .pf-dir{
+        margin: 8px 16px;
+    }
+}
+
+/* ---- LAYOUT:  2 per row  (SKINNY) ---*/
+@media (max-width: 1100px) {
+    .pf-dir > div{
+        width: calc(50% - (var(--dir-gap) / 2) );
+        aspect-ratio: 512/246;
+    }
+}
+
+/* ---- LAYOUT:  2 per row  (FAT) ---*/
+@media (max-width: 900px) {
+    .pf-dir > div{
+        width: calc(50% - (var(--dir-gap) / 2) );
+        aspect-ratio: 512/300;
+    }
+    .pf-dir > div > img{
+        object-position: 50% 80%;
+    }
+}
+
+/* ---- LAYOUT:  reduce font size ---*/
+@media (max-width: 730px) {
+    .pf-dir-name > div{
+        height: 47px;
+        font-size: 1rem;
+    }
+    .pf-dir-name > img{
+        transform: scaleY(47) scaleX(calc(47 / 4)); 
+    }
+    .pf-dir-name > div span{
+        font-size: 0.9rem;
+    }
+    .pf-dir > div{
+        aspect-ratio: 512/356;
+    }
+}
+
+/* ---- LAYOUT:  1 per row  (SKINNY) ---*/
+@media (max-width: 550px) {
+    .pf-dir > div{
+        width: 100%;
+        aspect-ratio: 512/200;
+    }
+    .pf-dir > div > img{
+        object-position: 50% 50%;
+    }
+}

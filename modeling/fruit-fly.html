@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html style="background-color: #2B3238; color: white;">
+
+<head>
+	<title>Modeling - Samantha DeSouto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robot" content="noindex, nofollow, none, noimageindex">
+
+	<link rel="stylesheet" href="../main.css">
+	<link rel="stylesheet" href="../styles/header.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+	<link rel="stylesheet" href="../styles/portfolio.css">
+	<link rel="stylesheet" href="../styles/showcase.css">
+
+	<script src="../scripts/headerScripts.js"></script>
+	<script src="../scripts/showcaseScripts.js"></script>
+	<script>
+		var loadingImage = "../media/symbols/loading.png";
+		var playImage = "../media/symbols/arrow-left.svg";
+	</script>
+</head>
+
+<body>
+	<noscript><div><span class="noscript-symbol">ⓘ</span>&nbsp;&nbsp;<span class="noscript-bold">Javascript is disabled.</span>&nbsp;&nbsp;Certain medias in the Portfolio page require Javascript in order to work. These elements may not display properly with scripts disabled.</div></noscript>
+	
+	<header>
+		<a class="h-name" href="../index.html">
+			Samantha DeSouto<br>
+			<span class="h-name-job">3D Generalist</span>
+		</a>
+		<nav class="h-nav">
+			<a href="../animation.html" class="nav-selected"><div>PORTFOLIO</div></a>
+			<a href="../about.html"><div>ABOUT</div></a>
+			<a href="../contact.html"><div>CONTACT</div></a>
+		</nav>
+		<a id="h-nav-MOB" onclick="headerToggle()"><img src="../media/symbols/svg-menu.svg"></a>
+	</header>
+
+	<div id="h-menu-MOB">
+		<div>
+			<a href="../animation.html" class="nav-selected"><div>PORTFOLIO</div></a>
+			<div></div>
+			<a href="../about.html"><div>ABOUT</div></a>
+			<div></div>
+			<a href="../contact.html"><div>CONTACT</div></a>
+		</div>
+	</div>
+
+	<nav class="pf-nav">
+		<a href="../animation.html">ANIMATION</a>
+		<a href="../modeling.html" class="nav-selected">MODELING</a>
+		<a href="../texturing.html">TEXTURING</a>
+		<a href="../rigging.html">RIGGING</a>
+	</nav>
+
+	<div class="sc-header">
+		<picture>
+			<source srcset="./media/fly-header.png">
+			<img src="./media/fly-header.png" style="object-position: 100% 50%;">
+		</picture>
+		<div class="sc-title">
+			<div class="sc-title-text">Fruit Fly Lab<br><span class="sc-subtitle">Vendor Commission</span>
+			</div>
+			<img src="../media/symbols/title-incline.svg">
+		</div>
+		<div class="sc-progs">
+			<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+		</div>
+		<div class="sc-back">
+			<a href="../modeling.html">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><polygon points="300 124.81 93.22 124.81 185.63 27.25 118.41 27.25 0 150 118.41 272.75 185.63 272.75 93.22 175.19 300 175.19 300 124.81" /></svg>
+				<span>BACK</span>
+				</a>
+		</div>
+	</div>
+	<div class="sc-title-MOB">
+		<div class="sc-title-text-MOB">Fruit Fly Lab<br><span class="sc-subtitle-MOB">Vendor Commission</span>
+		</div>
+	</div>
+
+	<div class="sc-i sc-i-closed">
+		
+		<div class="sc-i-body">
+
+			<p><span class="sc-i-sym">ⓘ</span>
+			&nbsp;&nbsp;I was commissioned and eventually became a vendor for the <a class="i-aqua" href="https://maimonlab.rockefeller.edu/" target="_blank">Maimon <span>Lab</span></a> of Rockefeller University for their scientific research: using fruit flies to study brain functionality. The head of the lab requested me to make video content that shows a viewer-friendly version of the experiments performed for talks and scientific journals/newsletters. Since this was a single-person project, all aspects had to be created by myself, including animation, environments, models, and composition planning.</p>
+			<p>The first set of requests were done in 2023, which includes creation of all of the meshes/rigs. Fruit fly references were supplied by the lab to aid in modeling and rigging. A broken glass jar was also modeled for an introductionary animation requested soon after.</p>
+
+			<div class="sc-i-credit">
+				<div class="sc-i-c-title">CREDITS</div>
+				<ul>
+					<li><span>Samantha DeSouto</span>all assets</li>
+				</ul>
+			</div>
+				
+		</div>
+		<div class="sc-i-show" onclick="infoToggle(this)"><span class="sc-i-PC">SHOW MORE</span><img class="sc-i-MOB" src="../media/symbols/point-down.svg"></div>
+	</div>
+
+	<div class="sc-dir sc-layout-2">
+		<div class="sc-media">
+			<div class="sc-comp">
+				<div class="sc-comp-img" style="aspect-ratio:2880/1620;">
+					<div class="sc-comp-left">
+						<picture>
+							<source srcset="./media/fly-2.png">
+							<img id="img-fly-2" src="./media/fly-2.png" loading=lazy>
+						</picture>
+						<p class="sc-media-hidden">Solid</p>
+					</div>
+					<div class="sc-comp-right">
+						<picture>
+							<source srcset="./media/fly-1.png">
+							<img id="img-fly-1" src="./media/fly-1.png" loading=lazy>
+						</picture>
+						<p class="sc-media-hidden">Render</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sc-media">
+			<div class="sc-comp">
+				<div class="sc-comp-img" style="aspect-ratio:2880/1620;">
+					<div class="sc-comp-left">
+						<picture>
+							<source srcset="./media/fly-4.png">
+							<img id="img-fly-4" src="./media/fly-4.png" loading=lazy>
+						</picture>
+						<p class="sc-media-hidden">Solid</p>
+					</div>
+					<div class="sc-comp-right">
+						<picture>
+							<source srcset="./media/fly-3.png">
+							<img id="img-fly-3" src="./media/fly-3.png" loading=lazy>
+						</picture>
+						<p class="sc-media-hidden">Render</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sc-media">
+			<div class="sc-comp">
+				<div class="sc-comp-img" style="aspect-ratio:2880/1620;">
+					<div class="sc-comp-left">
+						<picture>
+							<source srcset="./media/fly-6.png">
+							<img id="img-fly-6" src="./media/fly-6.png" loading=lazy>
+						</picture>
+						<p class="sc-media-hidden">Solid</p>
+					</div>
+					<div class="sc-comp-right">
+						<picture>
+							<source srcset="./media/fly-5.png">
+							<img id="img-fly-5" src="./media/fly-5.png" loading=lazy>
+						</picture>
+						<p class="sc-media-hidden">Render</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/fly-7.mp4">
+					<source srcset="./media/thumb/vid/fly-7.png">
+					<img id="img-fly-7" src="./media/thumb/vid/fly-7.png" loading=lazy>
+				</picture>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		headerSetup();
+		showcaseInit();
+	</script>
+
+	<footer>&copy; Copyright <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script><noscript>2025</noscript> – Samantha DeSouto<br>All Rights Reserved.
+	</footer>
+</body>
+
+
+</html>

@@ -1,0 +1,179 @@
+/*=====================================*/
+/*  HEADER
+/*=====================================*/
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 32px;
+}
+
+
+/*=====================================*/
+/*  HEADER LEFT
+/*=====================================*/
+.h-name{
+    font-family: "DM Sans";
+    font-weight: bold;
+    line-height: 90%;
+    font-size: 1.3rem;
+    color: #78EBD1;
+
+    cursor: pointer;
+}
+.h-name-job{
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+}
+
+/*=====================================*/
+/*  HEADER RIGHT
+/*=====================================*/
+.h-nav{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.h-nav > a{
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+
+    padding: 8px 12px 2px 12px;
+    transition: color 0.05s;
+}
+
+.h-nav > a:hover{
+    color: #cffcf1;
+    cursor: pointer;
+}
+
+.h-nav > a > div{
+    border-bottom: #0bad8700 4px solid;
+}
+
+.h-nav > a.nav-selected > div{
+    border-bottom: #0BAD88 4px solid;
+}
+
+
+/*------- MOBILE --------- */
+#h-nav-MOB{
+    display: none;
+    height: 32px;
+    aspect-ratio: 1;
+    padding: 3px;
+
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+#h-nav-MOB > img{
+    display: block;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1;
+}
+
+
+@media (max-width: 900px) {
+    .h-nav{ 
+        gap: max(4px, min(32px, calc((((100vw - 500px) / (900 - 550)) * 28) + 4px)));
+    }
+    .h-nav > a{
+        padding-left: max(6px, min(12px, calc((((100vw - 500px) / (900 - 550)) * 6) + 6px)));
+        padding-right: max(6px, min(12px, calc((((100vw - 500px) / (900 - 550)) * 6) + 6px)));
+        padding-top: max(4px, min(8px, calc((((100vw - 500px) / (900 - 550)) * 4) + 4px)));
+    }
+}
+
+@media (max-width: 1000px) {
+    header{
+        padding: 16px 16px;
+    }
+}
+
+@media (max-width: 550px){
+    .h-nav > a{
+        font-size: 0.9rem;
+    }
+    .h-name{
+        font-size: 1.1rem;
+    }
+    .h-name-job{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 456px){
+    .h-nav{
+        display: none;
+    }
+    #h-nav-MOB{
+        display: block;
+    }
+}
+
+/*---- COLLAPSED -------*/
+#h-nav-MOB.h-MOB-open{
+    background-color:#1b2025;
+}
+
+
+/*=====================================*/
+/*  HEADER MENU (MOBILE)
+/*=====================================*/
+
+#h-menu-MOB{
+    display: none;
+    flex-shrink: 0;
+
+    height: 0px;
+    margin-bottom: 0px;
+
+    overflow: hidden;
+    transition: height 0.3s cubic-bezier(.31,.7,.47,.99), margin-bottom 0.3s cubic-bezier(.31,.7,.47,.99);
+
+    flex-direction:column;
+
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: white;
+
+}
+#h-menu-MOB > div{
+    background-color: #1b2025;
+
+    padding: 4px 20px;
+}
+
+#h-menu-MOB > div > a{
+    display: flex;
+    justify-content: flex-start;
+    padding: 6px 10px;
+}
+
+
+#h-menu-MOB > div > div{
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+/*---- COLLAPSED -------*/
+#h-menu-MOB.h-MOB-open{
+    height: 109px;
+    margin-bottom: 10px;
+}
+
+/*------ MOBILE -------*/
+@media (max-width: 456px){
+    #h-menu-MOB{
+        display: flex;
+    }
+}

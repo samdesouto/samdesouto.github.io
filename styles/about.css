@@ -1,0 +1,223 @@
+/*=====================================*/
+/*  ABOUT BASE
+/*=====================================*/
+
+.ab-dir{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    --dir-gap: 12px;
+    gap: var(--dir-gap);
+    margin: 8px 32px;
+    padding: 16px;
+    background-color: #22282E;
+
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: white;
+}
+
+.ab-name{
+    color: #78EBD1;
+    font-weight: 600;
+}
+
+.ab-sub{
+    color: #96B5AE;
+    font-weight: 500;
+}
+
+.ab-inbetween{
+    width: 100%;
+    max-width: 900px;
+    padding-top: 20px;
+}
+
+/*=====================================*/
+/*  ABOUT PART 1
+/*=====================================*/
+
+.ab-1{
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+}
+
+.ab-1 span{
+    width: 30%;
+}
+
+.ab-1 img{
+    width: 100%;
+}
+
+.ab-1 div{
+    width: 70%;
+    padding-left: 40px;
+}
+
+
+
+/*=====================================*/
+/*  ABOUT PART 2
+/*=====================================*/
+
+.ab-2{
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+}
+
+.ab-2-text{
+    width: 50%;
+    padding-right: 40px;
+}
+
+.ab-2-text > p:first-child{
+    margin-top: 0px;
+}
+
+.ab-2-pics{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    --ab-gap: 12px;
+    gap: var(--ab-gap);
+}
+
+.ab-2-pics > div{
+    width: calc(50% - calc(var(--ab-gap) / 2));
+}
+
+.ab-2-pics > div > img{
+    width: 100%;
+}
+
+
+
+/*=====================================*/
+/*  PROGRAM EXPERIENCE (ab-p)
+/*=====================================*/
+
+.ab-p{
+    width: 100%;
+    height: fit-content;
+    max-width: 975px;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1%;
+    row-gap: 4px;
+    
+    background-color: #1b2025;
+    border-radius: 6px;
+}
+
+.ab-p-title{
+    width: 98%;
+    height: auto;
+    padding-bottom: 5px;
+    margin-bottom: 2px;
+    color: #ffffff;
+
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1.1rem;
+
+    border-bottom: #424746 2px solid;
+}
+
+.ab-pi{
+    width: 24%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+
+    cursor: pointer;
+}
+
+.ab-pi-logo{
+    width: 52px;
+    height: auto;
+    padding: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ab-pi-logo img{
+    width: 100%;
+    aspect-ratio: 1;
+    
+    filter: drop-shadow(1px 1px 0px #00000054) 
+            drop-shadow(-1px 1px 0px #00000054)
+            drop-shadow(1px -1px 0px #00000054)
+            drop-shadow(-1px -1px 0px #00000054);
+}
+
+.ab-pi-text{
+    color: #cde0dc;
+    padding: 6px;
+}
+
+.ab-pi-text > div{
+    color: white;
+    font-weight: 600;
+    line-height: 110%;
+    margin-bottom: 2px;
+}
+
+.ab-pi-text > div > span{
+    text-wrap: nowrap;
+}
+.ab-pi-text > div > span::after{
+    content: "";
+    color: #c4ddd9;
+    opacity: 50%;
+    display: inline-block;
+    margin-left: 6px;
+    width: 0.7lh;
+    height: 0.7lh;
+    background: currentColor;
+    flex-shrink:0;
+
+    mask-image: url("data:image/svg+xml; utf8, <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\"/></svg>");
+    mask-position: center center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+
+    text-decoration: none;
+
+    transition: opacity 0.05s;
+}
+
+.ab-pi:hover > .ab-pi-text > div > span::after{
+    opacity: 70%;
+}
+
+
+
+/* ----------- colors for expertise -----------*/
+.ab-pi-text > span{
+    font-weight: 550;
+    margin-left: 2px;
+}
+span.ab-pi-expert{
+    color: #78EBD1;
+}
+span.ab-pi-adv{
+    color: #8bc0b4;
+}
+span.ab-pi-inter{
+    color: #87a19c;
+}
+span.ab-pi-begin{
+    color: #7e8382;
+}

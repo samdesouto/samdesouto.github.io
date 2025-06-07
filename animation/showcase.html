@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html style="background-color: #2B3238; color: white;">
+
+<head>
+	<title>Animation - Samantha DeSouto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robot" content="noindex, nofollow, none, noimageindex">
+
+	<link rel="stylesheet" href="../main.css">
+	<link rel="stylesheet" href="../styles/header.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+	<link rel="stylesheet" href="../styles/portfolio.css">
+	<link rel="stylesheet" href="../styles/showcase.css">
+
+	<script src="../scripts/headerScripts.js"></script>
+	<script src="../scripts/showcaseScripts.js"></script>
+	<script>
+		var loadingImage = "../media/symbols/loading.png";
+		var playImage = "../media/symbols/arrow-left.svg";
+	</script>
+</head>
+
+<body>
+	<noscript><div><span class="noscript-symbol">ⓘ</span>&nbsp;&nbsp;<span class="noscript-bold">Javascript is disabled.</span>&nbsp;&nbsp;Certain medias in the Portfolio page require Javascript in order to work. These elements may not display properly with scripts disabled.</div></noscript>
+	
+	<header>
+		<a class="h-name" href="../index.html">
+			Samantha DeSouto<br>
+			<span class="h-name-job">3D Generalist</span>
+		</a>
+		<nav class="h-nav">
+			<a href="../animation.html" class="nav-selected"><div>PORTFOLIO</div></a>
+			<a href="../about.html"><div>ABOUT</div></a>
+			<a href="../contact.html"><div>CONTACT</div></a>
+		</nav>
+		<a id="h-nav-MOB" onclick="headerToggle()"><img src="../media/symbols/svg-menu.svg"></a>
+	</header>
+
+	<div id="h-menu-MOB">
+		<div>
+			<a href="../animation.html" class="nav-selected"><div>PORTFOLIO</div></a>
+			<div></div>
+			<a href="../about.html"><div>ABOUT</div></a>
+			<div></div>
+			<a href="../contact.html"><div>CONTACT</div></a>
+		</div>
+	</div>
+
+	<nav class="pf-nav">
+		<a href="../animation.html" class="nav-selected">ANIMATION</a>
+		<a href="../modeling.html">MODELING</a>
+		<a href="../texturing.html">TEXTURING</a>
+		<a href="../rigging.html">RIGGING</a>
+	</nav>
+
+	<div class="sc-header">
+		<picture>
+			<source srcset="./media/showcase-header.png">
+			<img src="./media/showcase-header.png" style="object-position: 80% 50%;">
+		</picture>
+		<div class="sc-title">
+			<div class="sc-title-text">Showcased Animations<br><span class="sc-subtitle">Personal</span>
+			</div>
+			<img src="../media/symbols/title-incline.svg">
+		</div>
+		<div class="sc-back">
+			<a href="../animation.html">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><polygon points="300 124.81 93.22 124.81 185.63 27.25 118.41 27.25 0 150 118.41 272.75 185.63 272.75 93.22 175.19 300 175.19 300 124.81" /></svg>
+				<span>BACK</span>
+				</a>
+		</div>
+	</div>
+	<div class="sc-title-MOB">
+		<div class="sc-title-text-MOB">Showcased Animations<br><span class="sc-subtitle-MOB">Personal</span>
+		</div>
+	</div>
+
+	<div class="sc-i sc-i-closed">
+		<div class="sc-i-body">
+
+			<p><span class="sc-i-sym">ⓘ</span>
+			&nbsp;&nbsp;This page is a collection of showcased animations put together from Fall 2023. All videos shown are based off of the <i class="i-bold">Five Nights at Freddy's</i>  series created by <b class="i-bold">Scott Cawthon</b>. Most of the animations revolve around later games in the series that were also developed by <b href="" class="i-bold"><a href="https://www.steelwoolstudios.com/" target="_blank">Steel Wool <span>Studios</span></a></b>.</p>
+			<p>The first two videos make up parts of <b class="i-aqua">"Freddy's Existential Crisis"</b>, a personal project made to practice cinematic animation, based on the game <i><a href="https://store.steampowered.com/app/747660/Five_Nights_at_Freddys_Security_Breach/" target="_blank">Five Nights at Freddy's: Security <span>Breach</span></a></i>. Freddy <span class="i-sub">(left video)</span>, an animatronic that is part of a large entertainment mall known as the "Pizzaplex," finds the young protaganist, Gregory <span class="i-sub">(right video)</span>, trapped in the mall after hours. Together, they explore the Pizzaplex to find a way out. Late into the night, the pair finds themselves deep underground where animatronics are created and their AI "trained" to be used in this Pizzaplex and others. Only a set of voice lines are played while the player explores this area, but the lines' intense implications felt worthy enough of a cinematic cutscene. While not completely finished, I've shown some shots that <i>were</i> finalized.</p>
+			<p>The next two videos are parts of <b class="i-aqua">"Foxy's Repair: Remake"</b>, based off of the game <i><a href="https://store.steampowered.com/app/732690/FIVE_NIGHTS_AT_FREDDYS_HELP_WANTED/" target="_blank">Five Nights at Freddy's: Help <span>Wanted</span></a></i>. This VR game is filled with dozens of horror "minigames" that expand the flat-screen-platform experiences of previous <i>FNAF</i> games. "Foxy's Repair" is one of these minigames; you are tasked with repairing Foxy, a broken animatronic, while avoiding his dangerous movements.</p>
+			<p>Because <i>Help Wanted</i> was Steel Wool's first inclusion into <i>FNAF,</i> the animation would usually feel underwhelming until the studio grew alongside more releases. As a result, Foxy's animations in his level are <i>very</i> linear and simple. I took it upon myself as a fun challenge to recreate these animations, giving the animatronic a more "weighted" feel and exploring its use of layered animations. The left video shows all of my animations properly combined, with the right video showing a more detailed breakdown of those seperate portions animated. All animations can be easily layered in a game engine such as Unreal Engine.</p>
+			<p>The final video, <b class="i-aqua">"The Monster is Back"</b>, is a silly joke experiment on implementing 2D environments in 3D software, but it turned out surprisingly great. It's based on an end-game cutscene from <i><a href="https://store.steampowered.com/app/506610/Five_Nights_at_Freddys_Sister_Location/" target="_blank">Five Nights at Freddy's: Sister <span>Location</span></a></i>, where the mangled, sleep-deprived, animatronic-ridden protagonist makes his way home from horror-filled nights at an underground animatronic storage location. A mix of rigs, drivers, and shapekeys allow me to manipulate the assets while keeping it 2D.</p>
+			<p>The most unique aspect this particular animation is that only the first scene is accurate to what is already in-game. The opposite view is nonexistent, and the figures never actually speak in-game. Those styles were concepted by myself.</p>
+
+			<div class="sc-i-credit">
+				<div class="sc-i-c-title">CREDITS</div>
+				<div class="sc-i-c-sub">Video 1 + 2</div>
+				<ul>
+					<li><span>Samantha DeSouto</span>all animation, lighting, rendering</li>
+					<li><span><a class="sc-i-link" href="https://www.kellengoff.com/" target="_blank">Kellen <span>Goff</span></a>,&nbsp;&nbsp;<a class="sc-i-link" href="https://www.instagram.com/martholio/" target="_blank">Marta <span>Svetek</span></a></span>voice acting</li>
+					<li><span><a class="sc-i-link" href="https://www.steelwoolstudios.com/" target="_blank">Steel Wool <span>Studios</span></a>,&nbsp;&nbsp;Scott Cawthon</span>all other assets, copyright</li>
+				</ul>
+				<div class="sc-i-c-sub">Video 3 + 4</div>
+				<ul>
+					<li><span>Samantha DeSouto</span>all animation, lighting, and rendering;&nbsp;&nbsp;desk, paint cans, and coin models</li>
+					<li><span>Team VR,&nbsp;&nbsp Thudner</span>Foxy, from <a class="sc-i-link" href="https://www.deviantart.com/thudner/art/Team-VR-HW-Model-Fixes-Blender-Port-Download-811434355" target="_blank">HW Model Fixes <span>Pack</span></a></li>
+					<li><span><a class="sc-i-link" href="https://www.steelwoolstudios.com/" target="_blank">Steel Wool <span>Studios</span></a>,&nbsp;&nbsp;Scott Cawthon</span>all other assets, copyright</li>
+				</ul>
+				<div class="sc-i-c-sub">Video 3 + 4</div>
+				<ul>
+					<li><span>Samantha DeSouto</span>all assets</li>
+					<li><span>Scott Cawthon</span>copyright, original game/concepts</li>
+				</ul>
+			</div>
+				
+		</div>
+		<div class="sc-i-show" onclick="infoToggle(this)"><span class="sc-i-PC">SHOW MORE</span><img class="sc-i-MOB" src="../media/symbols/point-down.svg"></div>
+	</div>
+
+
+
+	<div class="sc-dir sc-layout-2">
+
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/freddycrisis-1.mp4">
+					<source srcset="./media/thumb/vid/freddycrisis-1.png">
+					<img id="img-crisis-1" src="./media/thumb/vid/freddycrisis-1.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+					<a title="Adobe Premiere Pro 🡕" href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="../media/logos/premiere.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2022-2023</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/freddycrisis-2.mp4">
+					<source srcset="./media/thumb/vid/freddycrisis-2.png">
+					<img id="img-crisis-2" src="./media/thumb/vid/freddycrisis-2.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+					<a title="Adobe Premiere Pro 🡕" href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="../media/logos/premiere.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2023</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/foxy-1.mp4">
+					<source srcset="./media/thumb/vid/foxy-1.png">
+					<img id="img-foxy-1" src="./media/thumb/vid/foxy-1.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+					<a title="Adobe Premiere Pro 🡕" href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="../media/logos/premiere.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2019, 2021</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/foxy-2.mp4" vidmute="true">
+					<source srcset="./media/thumb/vid/foxy-2.png">
+					<img id="img-foxy-2" src="./media/thumb/vid/foxy-2.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+					<a title="Adobe Premiere Pro 🡕" href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="../media/logos/premiere.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2019, 2021</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/lean.mp4" vidmute="true">
+					<source srcset="./media/thumb/vid/lean.png">
+					<img id="img-lean" src="./media/thumb/vid/lean.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+					<a title="Adobe Premiere Pro 🡕" href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="../media/logos/premiere.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2022</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		headerSetup();
+		showcaseInit();
+	</script>
+
+	<footer>&copy; Copyright <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script><noscript>2025</noscript> – Samantha DeSouto<br>All Rights Reserved.
+	</footer>
+</body>
+
+
+</html>

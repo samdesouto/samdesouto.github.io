@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html style="background-color: #2B3238; color: white;">
+
+<head>
+	<title>Animation - Samantha DeSouto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robot" content="noindex, nofollow, none, noimageindex">
+
+	<link rel="stylesheet" href="../main.css">
+	<link rel="stylesheet" href="../styles/header.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+	<link rel="stylesheet" href="../styles/portfolio.css">
+	<link rel="stylesheet" href="../styles/showcase.css">
+
+	<script src="../scripts/headerScripts.js"></script>
+	<script src="../scripts/showcaseScripts.js"></script>
+	<script>
+		var loadingImage = "../media/symbols/loading.png";
+		var playImage = "../media/symbols/arrow-left.svg";
+	</script>
+</head>
+
+<body>
+	<noscript><div><span class="noscript-symbol">ⓘ</span>&nbsp;&nbsp;<span class="noscript-bold">Javascript is disabled.</span>&nbsp;&nbsp;Certain medias in the Portfolio page require Javascript in order to work. These elements may not display properly with scripts disabled.</div></noscript>
+	
+	<header>
+		<a class="h-name" href="../index.html">
+			Samantha DeSouto<br>
+			<span class="h-name-job">3D Generalist</span>
+		</a>
+		<nav class="h-nav">
+			<a href="../animation.html" class="nav-selected"><div>PORTFOLIO</div></a>
+			<a href="../about.html"><div>ABOUT</div></a>
+			<a href="../contact.html"><div>CONTACT</div></a>
+		</nav>
+		<a id="h-nav-MOB" onclick="headerToggle()"><img src="../media/symbols/svg-menu.svg"></a>
+	</header>
+
+	<div id="h-menu-MOB">
+		<div>
+			<a href="../animation.html" class="nav-selected"><div>PORTFOLIO</div></a>
+			<div></div>
+			<a href="../about.html"><div>ABOUT</div></a>
+			<div></div>
+			<a href="../contact.html"><div>CONTACT</div></a>
+		</div>
+	</div>
+
+	<nav class="pf-nav">
+		<a href="../animation.html" class="nav-selected">ANIMATION</a>
+		<a href="../modeling.html">MODELING</a>
+		<a href="../texturing.html">TEXTURING</a>
+		<a href="../rigging.html">RIGGING</a>
+	</nav>
+
+	<div class="sc-header">
+		<picture>
+			<source srcset="./media/fw-header.png">
+			<img src="./media/fw-header.png" style="object-position: 80% 50%;">
+		</picture>
+		<div class="sc-title">
+			<div class="sc-title-text">FNAF World: Fan-Animations<br><span class="sc-subtitle">Collaborations & Personal</span>
+			</div>
+			<img src="../media/symbols/title-incline.svg">
+		</div>
+		<div class="sc-back">
+			<a href="../animation.html">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><polygon points="300 124.81 93.22 124.81 185.63 27.25 118.41 27.25 0 150 118.41 272.75 185.63 272.75 93.22 175.19 300 175.19 300 124.81" /></svg>
+				<span>BACK</span>
+				</a>
+		</div>
+	</div>
+	<div class="sc-title-MOB">
+		<div class="sc-title-text-MOB">FNAF World: Fan-Animations<br><span class="sc-subtitle-MOB">Collaborations & Personal</span>
+		</div>
+	</div>
+
+	<div class="sc-i sc-i-closed">
+		
+		<div class="sc-i-body">
+			<div><div class="sc-i-sym">ⓘ</div>&nbsp;&nbsp;This commission was completed in hopes that the model project would be integrated into a Five Nights at Freddy's fangame called <i>Forsaken: AR</i>. <i>Forsaken</i> is based off of the now-discontinued <i>Five Nights at Freddy's: Special Delivery</i>, developed by Illumix. The fangame built upon the original game and added their own custom characters and "skins" for these characters monthly. Unfortunately, the concept was rejected, since it traveled too far away from the FNAF franchise. Their skins usually focused on generic ideas such as foods or environments.</div>
+			<div>The skin collection shown here involves five animatronics dressed up into characters from <i>DELTARUNE:</i> "Bonnie" becomes "Kris", "Jack-O-Chica" becomes "Susie", "Plushtrap" becomes "Ralsei", "Circus Baby" becomes "Queen", and "Balloon Boy" becomes "Spamton".</div>
+			<div>Not only were the skins created, but all existing and new meshes and textures were optimized for mobile gameplay.</div>
+		</div>
+		<div class="sc-i-show" onclick="infoToggle(this)"><span class="sc-i-PC">SHOW MORE</span><img class="sc-i-MOB" src="../media/symbols/point-down.svg"></div>
+	</div>
+
+	<div class="sc-dir sc-layout-2">
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/fw-jtp-1.mp4">
+					<source srcset="./media/thumb/vid/fw-jtp-1.png">
+					<img id="img-jtp-1" src="./media/thumb/vid/fw-jtp-1.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+					<a title="Adobe Premiere Pro 🡕" href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="../media/logos/premiere.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2021</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/fw-jtp-2.mp4">
+					<source srcset="./media/thumb/vid/fw-jtp-2.png">
+					<img id="img-jtp-2" src="./media/thumb/vid/fw-jtp-2.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+					<a title="Adobe Premiere Pro 🡕" href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="../media/logos/premiere.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2021</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/fw-jtp-3.mp4">
+					<source srcset="./media/thumb/vid/fw-jtp-3.png">
+					<img id="img-jtp-3" src="./media/thumb/vid/fw-jtp-3.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+					<a title="Adobe Premiere Pro 🡕" href="https://www.adobe.com/products/premiere.html" target="_blank"><img src="../media/logos/premiere.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2021</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1280/720;">
+				<picture vidlink="./media/fw-prototype-1.mp4">
+					<source srcset="./media/thumb/vid/fw-prototype-1.png">
+					<img id="img-proto-1" src="./media/thumb/vid/fw-prototype-1.pn" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2021, 2023</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="sc-dir sc-layout-3">
+		
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1;">
+				<picture vidlink="./media/fw-prototype-2.mp4">
+					<source srcset="./media/thumb/vid/fw-prototype-2.png">
+					<img src="./media/thumb/vid/fw-prototype-2.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2023</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1;">
+				<picture vidlink="./media/fwr-1.mp4">
+					<source srcset="./media/thumb/vid/fwr-1.png">
+					<img src="./media/thumb/vid/fwr-1.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2024</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="sc-media">
+			<div class="sc-vid" style="aspect-ratio:1;">
+				<picture vidlink="./media/fwr-2.mp4">
+					<source srcset="./media/thumb/vid/fwr-2.png">
+					<img src="./media/thumb/vid/fwr-2.png" loading=lazy>
+				</picture>
+			</div>
+			<div class="sc-desc">
+				<div class="sc-desc-info">
+					<a title="Blender 🡕" href="https://www.blender.org/" target="_blank"><img src="../media/logos/blender.png"></a>
+				</div>
+				<div class="sc-desc-text">
+					<span class="sc-dt-date">2024</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		headerSetup();
+		showcaseInit();
+	</script>
+
+	<footer>&copy; Copyright <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script><noscript>2025</noscript> – Samantha DeSouto<br>All Rights Reserved.
+	</footer>
+</body>
+
+
+</html>
