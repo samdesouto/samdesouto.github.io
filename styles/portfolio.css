@@ -49,7 +49,7 @@
     }
 }
 
-@media (max-width: 424px){
+@media (max-width: 428px){
     .pf-nav{
         padding: 8px 8px;
     }    
@@ -174,6 +174,11 @@
 }
 
 
+@media (hover: none) {
+    .pf-dir-link > div{
+        display: none;
+    }
+}
 
 
 
@@ -232,5 +237,13 @@
     }
     .pf-dir > div > img{
         object-position: 50% 50%;
+    }
+}
+
+/* ---- lose the margins ---*/
+@media (max-width: 428px) {
+    .pf-dir{
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }

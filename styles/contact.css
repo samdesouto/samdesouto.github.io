@@ -1,0 +1,276 @@
+/*=====================================*/
+/*  CONTACT BASE
+/*=====================================*/
+
+.c-dir{
+    display: flex;
+    justify-content: center;
+
+    margin: 8px 32px;
+    padding: 16px;
+    background-color: #22282E;
+
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: white;
+}
+
+.c-dir > div{
+    width: 100%;
+    max-width: 950px;
+
+    display: flex;
+    flex-wrap: wrap;
+    --dir-gap: 18px;
+    gap: var(--dir-gap);
+}
+
+.c-dir > div > div:first-of-type{
+    width: calc(60% - calc(var(--dir-gap) / 2));
+    min-width: calc(100% - 275px - calc(var(--dir-gap)));
+    padding-left: 10px;
+}
+.c-dir > div > div:last-of-type{
+    width: calc(40% - calc(var(--dir-gap) / 2));
+    max-width: 275px;
+    padding-right: 10px;
+}
+
+.c-dir > div > div > p{
+    margin-top: 0px;
+    margin-bottom: 18px;
+}
+
+/*=====================================*/
+/*  c-contact
+/*=====================================*/
+
+.c-contact{
+    display: flex;
+    gap: 15px;
+    /*padding: 10px;*/
+    /*background-color: #1b2025;*/
+    margin-bottom: 20px;
+    line-height: 115%;
+    border-radius: 5px;
+}
+
+.c-contact:last-of-type{
+    margin-bottom: 0px;
+}
+
+/*=====================================*/
+/*  c-cont-img
+/*=====================================*/
+.c-cont-img{
+    width: 30px;
+    flex-shrink: 0;
+    margin-left: 5px;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*=====================================*/
+/*  c-cont-text
+/*=====================================*/
+.c-cont-text{
+    width: calc(100% - 35px);
+
+    word-wrap: break-word;
+
+    display: flex;
+    flex-direction:column;
+
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.c-cont-text > p:first-of-type{
+    margin-bottom: 1px;
+}
+
+.c-cont-text p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*=====================================*/
+/*  c-sub
+/*=====================================*/
+.c-sub{
+    cursor: default;
+    color: #73b1a2;
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+
+/*=====================================*/
+/*  c-links
+/*=====================================*/
+.c-links{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.c-l-title{
+    width: 100%;
+    max-width: 275px;
+    height: auto;
+    padding-bottom: 5px;
+    margin-bottom: 2px;
+    color: #ffffff;
+
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1.1rem;
+
+    border-bottom: #404b498c 2px solid;
+}
+
+.c-li{
+    background-color: #1b2025;
+    transition: background-color 0.075s;
+    border-radius: 5px;
+    padding: 6px;
+
+    width: calc(100% - 15px);
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+
+    cursor: pointer;
+
+    max-width: 250px;
+}
+
+.c-li:hover{
+    background-color: rgb(59, 69, 78);
+}
+
+.c-li-logo{
+    width: 42px;
+    height: auto;
+    padding: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.c-li-logo img{
+    width: 100%;
+    aspect-ratio: 1;
+    
+    filter: drop-shadow(1px 1px 0px #00000054) 
+            drop-shadow(-1px 1px 0px #00000054)
+            drop-shadow(1px -1px 0px #00000054)
+            drop-shadow(-1px -1px 0px #00000054);
+}
+
+
+.c-li-text{
+    color: #cde0dc;
+    padding: 6px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.c-li-text > div{
+    color: white;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+.c-li-text > div > span{
+    text-wrap: nowrap;
+}
+
+.c-li-text > div > span::after{
+    content: "";
+    color: #c4ddd9;
+    opacity: 50%;
+    display: inline-block;
+    margin-left: 6px;
+    width: 0.7lh;
+    height: 0.7lh;
+    background: currentColor;
+    flex-shrink:0;
+
+    mask-image: url("data:image/svg+xml; utf8, <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\"/></svg>");
+    mask-position: center center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+
+    text-decoration: none;
+
+    transition: opacity 0.05s;
+}
+
+
+
+/*=====================================*/
+/*  RESIZING
+/*=====================================*/
+@media (max-width:624px){
+    .c-dir > div > div:first-of-type{
+        padding-left: 0px;
+    }
+    .c-dir > div > div:last-of-type{
+        padding-right: 0px;
+    }
+
+}
+
+@media (max-width:560px){
+    .c-dir > div > div:first-of-type,
+    .c-dir > div > div:last-of-type{
+        width: 100%;
+        max-width: unset;
+    }
+    .c-dir > div > div:last-of-type{
+        margin-top: 20px;
+    }
+
+    .c-links{
+        justify-content: left;
+    }
+    .c-l-title{
+        max-width: unset;
+    }
+    .c-li{
+        width: 100%;
+    }
+    .c-li-logo{
+        width: 38px;
+    }
+}
+
+@media (max-width:550px){
+    .c-cont-text{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:426px){
+    .c-dir{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

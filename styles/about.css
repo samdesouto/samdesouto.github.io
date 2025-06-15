@@ -19,6 +19,27 @@
     color: white;
 }
 
+@media (max-width: 1000px) {
+    .ab-dir{
+        margin: 8px 16px;
+    }
+}
+
+@media (max-width: 640px){
+    .ab-dir{
+        font-size: 0.95rem;
+        line-height: 1.15rem;
+    }
+}
+@media (max-width: 428px) {
+    .ab-dir{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+/*------------------------------*/
+
 .ab-name{
     color: #78EBD1;
     font-weight: 600;
@@ -33,66 +54,249 @@
     width: 100%;
     max-width: 900px;
     padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /*=====================================*/
 /*  ABOUT PART 1
 /*=====================================*/
 
-.ab-1{
-    display: flex;
-    justify-content: space-between;
-    max-width: 900px;
+.ab-1,
+.ab-2,
+.ab-inbetween,
+.ab-2-pics{
+    max-width: 950px;
 }
 
-.ab-1 span{
+.ab-1-thin,
+.ab-1-wide,
+.ab-2-thin,
+.ab-2-wide{
+    width: 100%;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.ab-1-thin,
+.ab-2-thin{
+    padding-top: 5px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.ab-1-thin div:has(img){
     width: 30%;
+    position: relative;
 }
 
-.ab-1 img{
+.ab-2-thin div:has(div > img){
+    width: 50%;
+    position: relative;
+}
+
+.ab-1-thin img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+.ab-2-thin img{
+    width: 49%;
+    height: 100%;
+    position: absolute;
+    object-fit:cover;
+}
+
+.ab-2-thin div:has(img):last-of-type > img{
+    left: 51%;
+}
+
+/*-- paragraph stuff--------------*/
+.ab-1-thin p,
+.ab-1-wide p,
+.ab-2-thin p,
+.ab-2-wide p{
+    margin: 0px;
+    margin-bottom: 0.5lh;
+    margin-top: 0.5lh;
+
     width: 100%;
 }
 
-.ab-1 div{
-    width: 70%;
+.ab-1-thin p,
+.ab-1-wide p{
     padding-left: 40px;
 }
 
-
-
-/*=====================================*/
-/*  ABOUT PART 2
-/*=====================================*/
-
-.ab-2{
-    display: flex;
-    justify-content: space-between;
-    max-width: 900px;
-}
-
-.ab-2-text{
-    width: 50%;
+.ab-2-thin p{
     padding-right: 40px;
 }
 
-.ab-2-text > p:first-child{
-    margin-top: 0px;
+.ab-1-thin p:first-of-type,
+.ab-2-thin p:first-of-type{
+    margin-top: 0.3lh;
+}
+
+.ab-1-thin p:last-of-type,
+.ab-2-thin p:last-of-type,
+.ab-1-wide p:last-of-type{
+    margin-bottom: 0.3lh;
+}
+
+.ab-1-wide p,
+.ab-2-wide p{
+    padding-left: 0px;
+    display: none;
+}
+
+.ab-1-thin > div:has(p){
+    width: 70%;
+}
+
+.ab-2-thin > div:has(p){
+    width: 50%;
 }
 
 .ab-2-pics{
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    --ab-gap: 12px;
-    gap: var(--ab-gap);
+    display: none;
+    justify-content: center;
+    gap: 1%;
+    height: 300px;
+    max-height: fit-content;
+    width: 100%;
 }
 
 .ab-2-pics > div{
-    width: calc(50% - calc(var(--ab-gap) / 2));
+    height: 100%;
+    width: 50%;
+    max-width: 250px;
+}
+.ab-2-pics img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.ab-2-pics > div > img{
-    width: 100%;
+
+/*=====================================*/
+/*  ABOUT PART 1 - RESIZING
+/*=====================================*/
+@media (max-width: 950px){
+    .ab-1-wide p:nth-last-of-type(-n+1){
+        display: block;
+    }
+    .ab-1-thin p:nth-last-of-type(-n+1){
+        display: none;
+    }
+    .ab-1-thin div:has(img){
+        width: 25%;
+    }
+    .ab-1-thin > div:has(p){
+        width: 75%;
+    }
+    .ab-1-thin p{
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 780px){
+    .ab-1-wide p:nth-last-of-type(-n+2){
+        display: block;
+    }
+    .ab-1-thin p:nth-last-of-type(-n+2){
+        display: none;
+    }
+    .ab-1-thin div:has(img){
+        width: 35%;
+    }
+    .ab-1-thin > div:has(p){
+        width: 65%;
+    }
+}
+
+@media (max-width: 560px){
+    .ab-1-thin div:has(img){
+        width: 40%;
+    }
+    .ab-1-thin > div:has(p){
+        width: 60%;
+    }
+    .ab-1-thin p{
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 500px){
+    .ab-1-thin div:has(img){
+        width: 50%;
+    }
+    .ab-1-thin > div:has(p){
+        width: 50%;
+    }
+    .ab-1-wide p:nth-last-of-type(-n+3){
+        display: block;
+    }
+    .ab-1-thin p:nth-last-of-type(-n+3){
+        display: none;
+    }
+    .ab-1-thin p:first-of-type{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 428px){
+    .ab-1-thin,
+    .ab-2-thin,
+    .ab-1-wide,
+    .ab-2-wide,
+    .ab-inbetween{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}
+
+
+
+/*=====================================*/
+/*  ABOUT PART 2 - RESIZING
+/*=====================================*/
+@media (max-width: 900px){
+    .ab-2-wide p:nth-last-of-type(-n+1){
+        display: block;
+    }
+    .ab-2-thin p:nth-last-of-type(-n+1){
+        display: none;
+    }
+    .ab-2-thin p{
+        padding-right: 30px;
+    }
+}
+@media (max-width: 730px){
+    .ab-2-wide p{
+        display: block;
+    }
+    .ab-2-thin{
+        display: none;
+    }
+    .ab-2-pics{
+        display: flex;
+    }
+}
+@media (max-width: 500px){
+    .ab-2-pics{
+        height: 200px;
+        gap: 2%;
+    }
+}
+@media (max-width: 360px){
+    .ab-2-pics{
+        height: 150px;
+    }
 }
 
 
@@ -177,6 +381,7 @@
 .ab-pi-text > div > span{
     text-wrap: nowrap;
 }
+
 .ab-pi-text > div > span::after{
     content: "";
     color: #c4ddd9;
@@ -200,6 +405,42 @@
 
 .ab-pi:hover > .ab-pi-text > div > span::after{
     opacity: 70%;
+}
+
+
+@media (max-width:1070px){
+    .ab-pi{
+        width: 32%;
+    }
+}
+@media (max-width:800px){
+    .ab-pi{
+        width: 49%;
+    }
+}
+
+@media (max-width:640px){
+    .ab-p-title{
+        font-size: 1rem;
+    }
+    .ab-pi{
+        font-size: 0.9rem;
+    }
+    .ab-pi-text > div{
+        line-height: 100%;
+    }
+    .ab-pi-logo{
+        width: 46px;
+    }
+}
+
+@media (max-width:448px){
+    .ab-pi{
+        width: 100%;
+    }
+    .ab-p{
+        row-gap:2px;
+    }
 }
 
 

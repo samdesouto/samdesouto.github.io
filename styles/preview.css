@@ -1,0 +1,85 @@
+/*=====================================*/
+/*  PREVIEW DIGITAL MEDIA (prv)
+/*=====================================*/
+
+#prv{
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(26, 28, 29, 0.856);
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+#prv.prv-open{
+    pointer-events: all;
+    opacity: 1;
+}
+
+body:has(#prv.prv-open){
+    overflow: hidden;
+}
+
+/*=====================================*/
+/*      prv-exit
+/*=====================================*/
+
+.prv-exit{
+    position: absolute;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    margin: 10px;
+
+    background-color: #ffffff00;
+    transition: background-color 0.05s;
+    border-radius: 5px;
+}
+
+.prv-exit:hover{
+    background-color: #ffffff18;
+    cursor: pointer;
+}
+
+.prv-exit > svg{
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width: 1440px){
+    .prv-exit{
+        right: calc(calc(100vw - 1440px) / 2);
+    }
+}
+
+
+/*=====================================*/
+/*      prv-media
+/*=====================================*/
+#prv-media{
+    position: absolute;
+    display: table;
+    text-align: center;
+
+    width: calc(100% - 30px);
+    height: calc(100% - 116px);
+    top: 58px;
+    left: 15px;
+}
+
+#prv-media > div{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#prv-media > div > img{
+    vertical-align: middle;
+    max-height: calc(100vh - 116px);
+    max-width: calc(100vw - 30px);
+    box-shadow: 0 4px 15px #111;
+    background-color: #272a2e;
+}

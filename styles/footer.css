@@ -20,3 +20,8 @@ footer{
     cursor: default;
 }
 
+@media (max-width:550px){
+    footer{
+        font-size: 0.7rem;
+    }
+}

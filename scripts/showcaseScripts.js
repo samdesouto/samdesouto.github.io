@@ -118,6 +118,9 @@ function prepareVideoLoad(par, pic){
 //========================================
 //           COMPARE MEDIAS
 //========================================
+//========================================
+//           COMPARE MEDIAS
+//========================================
 function debugMoveSlider(button){
     var par = button.parentNode;
 
@@ -181,11 +184,127 @@ function prepareCompLoad(par){
 
 
 //========================================
+//            PREVIEW DIV
+//========================================
+var preview_ENABLED = false;
+var preview_ISOPEN = false;
+
+function previewSetup(){
+    if (preview_ENABLED) return false;
+
+    if (document.getElementById("prv") == null){
+        var newPRV = document.createElement("div");
+        newPRV.id = "prv";
+        newPRV.innerHTML = '' +
+            '<div id="prv-media"><div>' +
+                '<img src="../media/blank.png">' +
+            '</div></div>' +
+
+            '<div class="prv-exit">' +
+                '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">' +
+                    '<defs>' +
+                        '<filter id="f1">' +
+                            '<feOffset in="SourceAlpha" dx="0" dy="0" />' +
+                            '<feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0.5 0"/>' +
+                            '<feGaussianBlur stdDeviation="20" />' +
+                            '<feBlend in="SourceGraphic" in2="blurOut" />' +
+                        '</filter>' +
+                    '</defs>' +
+                    '<polygon points="81.29 61.89 150 130.6 218.71 61.89 238.11 81.29 169.4 150 238.11 218.71 218.71 238.11 150 169.4 81.29 238.11 61.89 218.71 130.6 150 61.89 81.29 81.29 61.89" style="fill:#fff" filter="url(#f1)"/>' +
+                '</svg>' +
+            '</div>';
+        newPRV.querySelector(".prv-exit").addEventListener("click", function() {
+            previewToggleView(false);
+        });
+        document.body.appendChild(newPRV);
+        preview_ENABLED = true;
+        return true;
+    }
+    return false;
+}
+
+function previewSetImage(imgSrc){
+    if (preview_ENABLED){
+        var prvMedia = document.getElementById("prv-media");
+        if (prvMedia != null){
+            var prvImg = prvMedia.querySelector("img");
+            if (prvImg != null){
+                prvImg.src = imgSrc;
+            }else{
+                var newImg = document.createElement("img");
+                newImg.src = imgSrc;
+                prvMedia.appendChild(newImg);
+            }
+        }
+    }
+}
+
+function previewToggleView(toOpen = false){
+    if (preview_ENABLED){
+        var PRV = document.getElementById("prv");
+
+        if (toOpen && !preview_ISOPEN){
+            if (!PRV.classList.contains("prv-open")) { PRV.classList.add("prv-open"); }
+            preview_ISOPEN = true;
+        }else if (!toOpen && preview_ISOPEN){
+            if (PRV.classList.contains("prv-open")) { PRV.classList.remove("prv-open"); }
+            preview_ISOPEN = false;
+        }
+    }
+}
+
+function previewEventOpen(imgLink){
+    if (!preview_ISOPEN){
+        var par = imgLink.closest(".sc-media");
+        if (par != null){
+            var imgImg = par.querySelector("div.sc-img > picture > img");
+            if (imgImg != null){
+                previewSetImage(imgImg.src);
+                previewToggleView(true);
+            }
+        }
+    }
+}
+
+function createPreviewLinkElement(){
+    if (!preview_ENABLED){
+        previewSetup();
+    }
+
+    if (preview_ENABLED){
+        var newDiv = document.createElement("div");
+        newDiv.classList.add("sc-img-LINK");
+        newDiv.addEventListener("click", function() {
+            previewEventOpen(this);
+        });
+        newDiv.innerHTML = '' + 
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">' + 
+                '<defs>' +
+                    '<filter id="f2">' +
+                        '<feOffset in="SourceAlpha" dx="0" dy="0" />' + 
+                        '<feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0.5 0"/>' + 
+                        '<feGaussianBlur stdDeviation="20" />' + 
+                        '<feBlend in="SourceGraphic" in2="blurOut" />' +
+                    '</filter>' +
+                '</defs>' + 
+                '<path d="M249.08,224.78l-50.22-50.21a81.31,81.31,0,1,0-24.27,24.29l50.19,50.23a4.33,4.33,0,0,0,6.09,0l18.21-18.22A4.33,4.33,0,0,0,249.08,224.78Zm-173.67-94a55.34,55.34,0,1,1,55.34,55.32A55.41,55.41,0,0,1,75.41,130.76Z" style="fill:#fff" filter="url(#f2)"/>' + 
+            '</svg>';
+
+        return newDiv;
+    }
+    else {return null}
+}
+
+
+//========================================
 //            PREPARE MEDIA LOAD
 //========================================
 
 function finishMediaLoad(img){
+
     img.showcaseData.doneLoading = true;
+    img.onload = undefined;
+
     var par = img.showcaseData.par;
     var imgList = img.showcaseData.imgList;
     // check for other images still loading; cancel if yes
@@ -230,8 +349,20 @@ function finishMediaLoad(img){
     //video medias
     }else if (par.classList.contains("sc-vid")){
         prepareVideoLoad(par, img.parentElement);
+    
+    // image preview code
+    }else{
+        var closeMedia = par.closest(".sc-media");
+        if (closeMedia){
+            var newPrevLink = createPreviewLinkElement();
+            if (newPrevLink != null){
+                closeMedia.appendChild(newPrevLink);
+            }
+        }
     }
+
 }
+
 
 
 
