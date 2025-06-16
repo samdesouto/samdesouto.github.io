@@ -135,6 +135,8 @@ function compSlideStart(e){
     if(e.pointerType !== 'mouse' || e.button === 0){
         this.onpointermove = compSlideUpdate;
         this.setPointerCapture(e.pointerId);
+
+        document.body.style = "overflow: hidden;";
     }
 }
 
@@ -142,6 +144,8 @@ function compSlideEnd(e){
     if(e.pointerType !== 'mouse' || e.button === 0){
         this.onpointermove = null;
         this.releasePointerCapture(e.pointerId);
+
+        document.body.style = "";
     }
 }
 
